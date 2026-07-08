@@ -67,9 +67,13 @@ import { useEffect, useState } from "react";
     title: "Program Coordinator",
     image: "/team/suruchi-bassi.png",
     slug: "suruchi-bassi",
-    bio:"Suruchi Bassi is a Wellness Coach, Life Coach, Energy Healer, and Grand Reiki Master dedicated to helping people create balance in mind, body, and soul. Through her online fitness and wellness community, she inspires people of all age groups to embrace a healthier, happier, and more conscious lifestyle. Her sessions beautifully combine fitness, yoga, meditation, breathwork, chakra healing, Reiki, and spiritual awareness to support holistic well-being. She is especially passionate about guiding people toward self-discovery, emotional healing, inner confidence, and positive transformation."
+    bio:"Suruchi Bassi is a Holistic Wellness Coach, Energy Healer, Grand Reiki Master, and Yoga Practitioner dedicated to empowering individuals on their journey toward health, happiness, and self-growth. Through a blend of yoga, meditation, breathwork, energy healing, and life coaching, she helps people build physical vitality, emotional resilience, and inner balance.\n\nSuruchi creates transformative experiences that inspire positive lifestyle changes, self-awareness, and overall well-being. Her mission is to help people reconnect with their inner strength and live a more conscious, fulfilling life."
   },
 ];
+
+const imagePositionBySlug: Record<string, string> = {
+  "suruchi-bassi": "center 18%",
+};
 
 
 
@@ -110,6 +114,7 @@ export default function TeamDetailPage() {
           width={128}
           height={128}
           className="object-cover w-full h-full"
+          style={{ objectPosition: imagePositionBySlug[member?.slug || ""] || "center" }}
         />
        
       </div>
@@ -121,7 +126,7 @@ export default function TeamDetailPage() {
      </div>
      
       <div className="w-full bg-white rounded-lg shadow-sm p-6 text-gray-700 text-base leading-relaxed">
-        <p className="text-[16px] md:text-[22px]">
+        <p className="whitespace-pre-line text-[16px] md:text-[22px]">
          {member?.bio}
         </p>
       </div>

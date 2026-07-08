@@ -62,6 +62,12 @@ const team: TeamMember[] = [
     slug: "suruchi-bassi",
   }
 ];
+
+const imagePositionBySlug: Record<string, string> = {
+  "anil-tiwari": "center 18%",
+  "suruchi-bassi": "center 18%",
+};
+
 export default function TeamSection() {
   const router = useRouter();
   const handleClick = (member:any) => {
@@ -86,6 +92,7 @@ export default function TeamSection() {
     src={member.image}
     alt={member.name}
     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    style={{ objectPosition: imagePositionBySlug[member.slug] || "center" }}
   />
 </div>
             </div>

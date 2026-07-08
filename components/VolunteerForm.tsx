@@ -34,7 +34,7 @@ export default function VolunteerForm() {
     },
   });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = (data: FormData) => {
     if (!file) {
       alert("Please upload your resume");
       return;
@@ -42,33 +42,29 @@ export default function VolunteerForm() {
 
     setLoading(true);
 
-    const formData = new FormData();
+    const message = [
+      "Volunteer Application",
+      "",
+      `Full Name: ${data.fullName}`,
+      `Mobile Number: ${data.mobile}`,
+      `Email ID: ${data.email}`,
+      `Skills: ${data.skills}`,
+      `Resume: ${file.name}`,
+    ].join("\n");
 
-    Object.entries(data).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
+    const whatsappUrl = `https://wa.me/919873335928?text=${encodeURIComponent(
+      message
+    )}`;
 
-    formData.append("resume", file);
-
-    const response = await fetch("/api/volunteer", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      alert("Application submitted successfully");
-      reset();
-      setFile(null);
-    } else {
-      alert("Something went wrong");
-    }
-
+    reset();
+    setFile(null);
     setLoading(false);
+    window.location.href = whatsappUrl;
   };
 
   return (
-    <div>
-      <h2 className="mb-8 text-[32px] font-bold text-[#006C49]">
+    <div className="w-full">
+      <h2 className="mb-6 text-[30px] font-bold text-[#006C49]">
         Submit Your Details
       </h2>
 
@@ -84,7 +80,8 @@ export default function VolunteerForm() {
 
     <input
       id="fullName"
-      {...register("fullName")}
+      {...register("fullName", { required: true })}
+      required
       placeholder="Enter your full name"
       className="w-full rounded-xl border border-[#BBCABF] bg-[#F8F9FF] p-4 outline-none transition-all focus:border-[#00A554] focus:ring-2 focus:ring-[#00A554]/20"
     />
@@ -102,7 +99,8 @@ export default function VolunteerForm() {
 
       <input
         id="mobile"
-        {...register("mobile")}
+        {...register("mobile", { required: true })}
+        required
         placeholder="+91 9999999999"
         className="w-full rounded-xl border border-[#BBCABF] bg-[#F8F9FF] p-4 outline-none transition-all focus:border-[#00A554] focus:ring-2 focus:ring-[#00A554]/20"
       />
@@ -120,7 +118,8 @@ export default function VolunteerForm() {
       <input
         id="email"
         type="email"
-        {...register("email")}
+        {...register("email", { required: true })}
+        required
         placeholder="name@company.com"
         className="w-full rounded-xl border border-[#BBCABF] bg-[#F8F9FF] p-4 outline-none transition-all focus:border-[#00A554] focus:ring-2 focus:ring-[#00A554]/20"
       />
@@ -138,7 +137,8 @@ export default function VolunteerForm() {
 
     <textarea
       id="skills"
-      {...register("skills")}
+      {...register("skills", { required: true })}
+      required
       rows={4}
       placeholder="e.g. UI Design, Figma, CSS, Project Management"
       className="w-full rounded-xl border border-[#BBCABF] bg-[#F8F9FF] p-4 outline-none transition-all focus:border-[#00A554] focus:ring-2 focus:ring-[#00A554]/20"
