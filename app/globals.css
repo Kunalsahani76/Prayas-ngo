@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 142 72% 29%; /* Green (Brand Primary) */
+  --primary-foreground: 0 0% 98%; /* Almost White (Text on Primary) */
+  
+  --background: 0 0% 100%; /* White */
+  --foreground: 0 0% 3.9%; /* Almost Black (Text on Light) */
+  
+  --card: 0 0% 100%; /* White (Card Background) */
+  --card-foreground: 0 0% 3.9%; /* Almost Black (Card Text) */
+  
+  --popover: 0 0% 100%; /* White (Popover Background) */
+  --popover-foreground: 0 0% 3.9%; /* Almost Black (Popover Text) */
+  
+  --secondary: 0 0% 96.1%; /* Light Gray */
+  --secondary-foreground: 0 0% 9%; /* Dark Gray Text on Secondary */
+  
+  --muted: 0 0% 96.1%; /* Light Gray (Muted Background) */
+  --muted-foreground: 0 0% 45.1%; /* Medium Gray (Muted Text) */
+  
+  --accent: 142 72% 29%; /* Green (Same as Primary) */
+  --accent-foreground: 0 0% 9%; /* Dark Gray (Text on Accent) */
+  
+  --destructive: 0 84.2% 60.2%; /* Bright Red (Error State) */
+  --destructive-foreground: 0 0% 98%; /* Almost White (Text on Red) */
+
+  --border: 0 0% 89.8%; /* Light Gray (Border) */
+  --input: 0 0% 89.8%; /* Light Gray (Input Background/Border) */
+  --ring: 142 72% 29%; /* Green (Focus Ring) */
+  
+  --radius: 0.5rem; /* Rounded Corner Radius */
+}
+
+.dark {
+  --background: 0 0% 3.9%; /* Almost Black (Dark Mode Background) */
+  --foreground: 0 0% 98%; /* Almost White (Text in Dark Mode) */
+  
+  --card: 0 0% 3.9%; /* Dark Gray (Card Background) */
+  --card-foreground: 0 0% 98%; /* Almost White (Card Text) */
+  
+  --popover: 0 0% 3.9%; /* Dark Gray (Popover Background) */
+  --popover-foreground: 0 0% 98%; /* Almost White (Popover Text) */
+  
+  --primary: 142 72% 29%; /* Green (Brand Primary) */
+  --primary-foreground: 0 0% 9%; /* Dark Gray (Text on Green) */
+  
+  --secondary: 0 0% 14.9%; /* Very Dark Gray (Secondary Background) */
+  --secondary-foreground: 0 0% 98%; /* Almost White (Text on Secondary) */
+  
+  --muted: 0 0% 14.9%; /* Very Dark Gray (Muted Background) */
+  --muted-foreground: 0 0% 63.9%; /* Light Gray (Muted Text) */
+  
+  --accent: 142 72% 29%; /* Green (Accent) */
+  --accent-foreground: 0 0% 98%; /* Almost White (Text on Accent) */
+  
+  --destructive: 0 62.8% 30.6%; /* Dark Red (Error Background) */
+  --destructive-foreground: 0 0% 98%; /* Almost White (Text on Error) */
+  
+  --border: 0 0% 14.9%; /* Very Dark Gray (Border) */
+  --input: 0 0% 14.9%; /* Very Dark Gray (Input Background/Border) */
+  --ring: 142 72% 29%; /* Green (Focus Ring) */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body{
+  background: #fff;
+  color: #000;
+}
+.heading {
+  font-family: var(--font-playfair);
+}
+.subheading {
+  font-family: var(--font-poppins);
+}
+
+.body-text {
+  font-family: var(--font-inter);
+}
