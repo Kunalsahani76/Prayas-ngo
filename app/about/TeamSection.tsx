@@ -56,6 +56,12 @@ const team: TeamMember[] = [
     slug: "anil-tiwari",
   },
   {
+    name: "Anamika Kamal",
+    title: "Program Coordinator",
+    image: "/team/Anamika Kamal.jpg",
+    slug: "anamika-kamal",
+  },
+  {
     name: "Suruchi Bassi",
     title: "Program Coordinator",
     image: "/team/suruchi-bassi.png",
@@ -65,6 +71,7 @@ const team: TeamMember[] = [
 
 const imagePositionBySlug: Record<string, string> = {
   "anil-tiwari": "center 18%",
+  "anamika-kamal": "center 28%",
   "suruchi-bassi": "center 18%",
 };
 

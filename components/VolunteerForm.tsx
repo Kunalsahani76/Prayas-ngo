@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDropzone } from "react-dropzone";
+import emailjs from "@emailjs/browser";
 
 type FormData = {
   fullName: string;
@@ -14,6 +15,7 @@ type FormData = {
 export default function VolunteerForm() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
 
   const {
     register,
@@ -34,7 +36,7 @@ export default function VolunteerForm() {
     },
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     if (!file) {
       alert("Please upload your resume");
       return;
@@ -45,6 +47,7 @@ export default function VolunteerForm() {
     const message = [
       "Volunteer Application",
       "",
+      "To: info@theprayasfoundation.org",
       `Full Name: ${data.fullName}`,
       `Mobile Number: ${data.mobile}`,
       `Email ID: ${data.email}`,
@@ -52,14 +55,43 @@ export default function VolunteerForm() {
       `Resume: ${file.name}`,
     ].join("\n");
 
-    const whatsappUrl = `https://wa.me/919873335928?text=${encodeURIComponent(
-      message
-    )}`;
+    if (!form.current) {
+      setLoading(false);
+      return;
+    }
 
-    reset();
-    setFile(null);
-    setLoading(false);
-    window.location.href = whatsappUrl;
+    const setEmailField = (name: string, value: string) => {
+      const field = form.current?.elements.namedItem(name);
+      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) {
+        field.value = value;
+      }
+    };
+
+    setEmailField("first_name", "Volunteer");
+    setEmailField("last_name", data.fullName);
+    setEmailField("subject", `Volunteer Application - ${data.fullName}`);
+    setEmailField("message", message);
+    setEmailField("to_email", "info@theprayasfoundation.org");
+    setEmailField("resume_name", file.name);
+
+    try {
+      await emailjs.sendForm(
+        "service_bualwce",
+        "template_n5ez9gm",
+        form.current,
+        "ZUtUsBOL88uEafhla"
+      );
+
+      alert("Application submitted successfully!");
+      reset();
+      setFile(null);
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Please try again later.";
+      alert("Failed to submit application: " + errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -68,7 +100,13 @@ export default function VolunteerForm() {
         Submit Your Details
       </h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+      <form ref={form} onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+  <input type="hidden" name="first_name" />
+  <input type="hidden" name="last_name" />
+  <input type="hidden" name="subject" />
+  <input type="hidden" name="to_email" />
+  <input type="hidden" name="resume_name" />
+  <textarea name="message" className="hidden" readOnly />
   {/* Full Name */}
   <div>
     <label
@@ -158,7 +196,7 @@ export default function VolunteerForm() {
       {...getRootProps()}
       className="cursor-pointer rounded-2xl border-2 border-dashed border-[#BBCABF] bg-[#F8F9FF] p-10 text-center"
     >
-      <input id="resume" {...getInputProps()} />
+      <input id="resume" {...getInputProps({ name: "resume" })} />
 
       <div className="mb-5 flex justify-center">
         <img

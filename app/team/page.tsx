@@ -62,6 +62,13 @@ import { useEffect, useState } from "react";
     slug: "anil-tiwari",
     bio:"Anil Tiwari is a retired banker with 38 years of experience across India — from Dibrugarh in the Northeast to Baroda in the West, and in major cities like Kolkata and Mumbai. This exposure deepened his understanding of diverse cultures, customs, and ways of life across the country. Academically, he holds an LLB, MBA, and MA in Economics — qualifications that shaped his decision-making and prepared him for senior responsibilities. Anil has a lifelong commitment to education. During school, he actively volunteered in _प्रौढ़ शिक्षा अभियान_, teaching literacy to laborers and vendors. In college, he continued this work with an NGO focused on educating children, domestic workers, and daily wage earners."
   },
+  {
+    name: "Anamika Kamal",
+    title: "Program Coordinator",
+    image: "/team/Anamika Kamal.jpg",
+    slug: "anamika-kamal",
+    bio:"Anamika Kamal is a dedicated development professional and mental health specialist. Combining an advanced academic background featuring an M.Sc., B.Ed., and M.Phil. in Biotechnology with her deep expertise as a qualified Clinical Psychologist, Anamika coordinates operations with a holistic focus on community well-being. Following a successful career in academia as an Assistant Lecturer she transitioned into mental health advocacy as a constant learner. She is a certified mental health professional and designs and implements tailored personal and group counseling therapies."
+  },
    {
     name: "Suruchi Bassi",
     title: "Program Coordinator",
@@ -72,6 +79,8 @@ import { useEffect, useState } from "react";
 ];
 
 const imagePositionBySlug: Record<string, string> = {
+  "anil-tiwari": "center 18%",
+  "anamika-kamal": "center 28%",
   "suruchi-bassi": "center 18%",
 };
 
@@ -107,17 +116,19 @@ export default function TeamDetailPage() {
 
     <div className="flex pt-[120px] w-full md:pt-[150px] lg:pt-[200px] flex-col items-center justify-center py-10 bg-[#fdfdfb] text-left container  mx-auto px-4">
      <div className="flex items-center w-full">
+       {member ? (
        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md mb-4">
         <Image
-          src={member?.image} // Place your image in the public folder as `public/founder.jpg`
-          alt={member?.name}
+          src={member.image} // Place your image in the public folder as `public/founder.jpg`
+          alt={member.name}
           width={128}
           height={128}
           className="object-cover w-full h-full"
-          style={{ objectPosition: imagePositionBySlug[member?.slug || ""] || "center" }}
+          style={{ objectPosition: imagePositionBySlug[member.slug] || "center" }}
         />
        
       </div>
+       ) : null}
 
        <div className="pl-4">
            <h1 className="text-2xl sm:text-3xl font-bold text-[#1b2230]">{member?.name}</h1>
