@@ -10,6 +10,30 @@ const eventDetails: Record<string, {
   description: string;
   images: { src: string; title: string }[];
 }> = {
+  "session-at-aid-noida-centre-july-2026": {
+    title: "Session at AID Noida Centre July 2026",
+    date: "July 2026",
+    location: "AID Noida Centre, Noida",
+    description: "A session held at AID Noida Centre, bringing together participants for meaningful learning and engagement.",
+    images: [
+      { src: "/event/Session%20at%20AID%20Noida%20Centre%20July%202026/WhatsApp%20Image%202026-07-18%20at%2011.22.13%20%20%20AM.jpeg", title: "Session at AID Noida Centre" },
+      { src: "/event/Session%20at%20AID%20Noida%20Centre%20July%202026/WhatsApp%20Image%202026-07-18%20at%2011.22.13%20%20AM.jpeg", title: "Session at AID Noida Centre" },
+      { src: "/event/Session%20at%20AID%20Noida%20Centre%20July%202026/WhatsApp%20Image%202026-07-18%20at%2011.22.13%20AM.jpeg", title: "Session at AID Noida Centre" },
+    ],
+  },
+  "session-at-sankalp-education-centre-delhi-july-2026": {
+    title: "Session at Sankalp Education Centre, Delhi July 2026",
+    date: "July 2026",
+    location: "Sankalp Education Centre, Delhi",
+    description: "A session held at Sankalp Education Centre, Delhi, with engaging activities and shared learning experiences.",
+    images: [
+      { src: "/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.34.59%20PM%20%281%29.jpeg", title: "Session at Sankalp Education Centre, Delhi" },
+      { src: "/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.34.59%20PM.jpeg", title: "Session at Sankalp Education Centre, Delhi" },
+      { src: "/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.35.00%20PM%20%281%29.jpeg", title: "Session at Sankalp Education Centre, Delhi" },
+      { src: "/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.35.00%20PM%20%282%29.jpeg", title: "Session at Sankalp Education Centre, Delhi" },
+      { src: "/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.35.00%20PM.jpeg", title: "Session at Sankalp Education Centre, Delhi" },
+    ],
+  },
   "life-skill-session-noida": {
     title: "Life Skill Session at Lotus Krishna Vidya Bhawan, Noida",
     date: "November 2025",

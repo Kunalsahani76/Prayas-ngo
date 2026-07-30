@@ -12,6 +12,23 @@ import { title } from "node:process";
 
 
 const events = [
+  {
+    image: '/event/Session%20at%20AID%20Noida%20Centre%20July%202026/WhatsApp%20Image%202026-07-18%20at%2011.22.13%20%20%20AM.jpeg',
+    imagePosition: 'center 30%',
+    title: 'Session at AID Noida Centre July 2026',
+    date: 'July 2026',
+    location: 'AID Noida Centre, Noida',
+    slug: 'session-at-aid-noida-centre-july-2026',
+    hasDetails: true,
+  },
+  {
+    image: '/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.34.59%20PM%20%281%29.jpeg',
+    title: 'Session at Sankalp Education Centre, Delhi July 2026',
+    date: 'July 2026',
+    location: 'Sankalp Education Centre, Delhi',
+    slug: 'session-at-sankalp-education-centre-delhi-july-2026',
+    hasDetails: true,
+  },
     {
     image: '/krishna-vidya-bhawan/image-1.png',
     title: 'Interaction with students of Lotus Krishna Vidya Bhawan, Noida',
@@ -134,6 +151,7 @@ const EventsPage = () => {
             alt={event.title}
             layout="fill"
             objectFit="cover"
+            style={{ objectPosition: event.imagePosition ?? 'center' }}
             className="transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
         </div>
