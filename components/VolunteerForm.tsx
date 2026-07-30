@@ -37,11 +37,6 @@ export default function VolunteerForm() {
   });
 
   const onSubmit = async (data: FormData) => {
-    if (!file) {
-      alert("Please upload your resume");
-      return;
-    }
-
     setLoading(true);
 
     const message = [
@@ -52,7 +47,7 @@ export default function VolunteerForm() {
       `Mobile Number: ${data.mobile}`,
       `Email ID: ${data.email}`,
       `Skills: ${data.skills}`,
-      `Resume: ${file.name}`,
+      `Resume: ${file?.name ?? "Not uploaded"}`,
     ].join("\n");
 
     if (!form.current) {
@@ -72,14 +67,24 @@ export default function VolunteerForm() {
     setEmailField("subject", `Volunteer Application - ${data.fullName}`);
     setEmailField("message", message);
     setEmailField("to_email", "prayasfoundation2025@gmail.com");
-    setEmailField("resume_name", file.name);
+    setEmailField("resume_name", file?.name ?? "Not uploaded");
 
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         "service_bualwce",
         "template_n5ez9gm",
-        form.current,
-        "ZUtUsBOL88uEafhla"
+        {
+          first_name: "Volunteer",
+          last_name: data.fullName,
+          subject: `Volunteer Application - ${data.fullName}`,
+          to_email: "prayasfoundation2025@gmail.com",
+          from_email: data.email,
+          mobile: data.mobile,
+          skills: data.skills,
+          resume_name: file?.name ?? "Not uploaded",
+          message,
+        },
+        "-OBc7GDCXkLBa-Ot9"
       );
 
       alert("Application submitted successfully!");
@@ -87,7 +92,11 @@ export default function VolunteerForm() {
       setFile(null);
     } catch (error) {
       const errorMessage =
-        error instanceof Error ? error.message : "Please try again later.";
+        typeof error === "object" && error !== null && "text" in error
+          ? String(error.text)
+          : error instanceof Error
+            ? error.message
+            : "Please try again later.";
       alert("Failed to submit application: " + errorMessage);
     } finally {
       setLoading(false);

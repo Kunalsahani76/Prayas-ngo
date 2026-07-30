@@ -90,6 +90,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        />
+        <script type="text/javascript">
+          {`(function () {
+            emailjs.init({
+              publicKey: "-OBc7GDCXkLBa-Ot9",
+            });
+          })();`}
+        </script>
       </head>
       <body className={`${inter.variable} ${playfair.variable} ${poppins.variable} antialiased`}>
         <Suspense fallback={<LoadingPage />}>
