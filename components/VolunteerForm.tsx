@@ -47,7 +47,7 @@ export default function VolunteerForm() {
     const message = [
       "Volunteer Application",
       "",
-      "To: info@theprayasfoundation.org",
+      "To: prayasfoundation2025@gmail.com",
       `Full Name: ${data.fullName}`,
       `Mobile Number: ${data.mobile}`,
       `Email ID: ${data.email}`,
@@ -71,7 +71,7 @@ export default function VolunteerForm() {
     setEmailField("last_name", data.fullName);
     setEmailField("subject", `Volunteer Application - ${data.fullName}`);
     setEmailField("message", message);
-    setEmailField("to_email", "info@theprayasfoundation.org");
+    setEmailField("to_email", "prayasfoundation2025@gmail.com");
     setEmailField("resume_name", file.name);
 
     try {
