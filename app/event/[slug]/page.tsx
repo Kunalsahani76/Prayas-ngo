@@ -22,7 +22,7 @@ const eventDetails: Record<string, {
     ],
   },
   "session-at-sankalp-education-centre-delhi-july-2026": {
-    title: "Session at Sankalp Education Centre, Delhi July 2026",
+    title: "Session at Sankalp Education Centre, Delhi",
     date: "July 2026",
     location: "Sankalp Education Centre, Delhi",
     description: "A session held at Sankalp Education Centre, Delhi, with engaging activities and shared learning experiences.",

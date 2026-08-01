@@ -23,7 +23,7 @@ const events = [
   },
   {
     image: '/event/Session%20at%20Sankalp%20Education%20Centre%2C%20Delhi%20July%202026/WhatsApp%20Image%202026-07-15%20at%206.34.59%20PM%20%281%29.jpeg',
-    title: 'Session at Sankalp Education Centre, Delhi July 2026',
+    title: 'Session at Sankalp Education Centre, Delhi',
     date: 'July 2026',
     location: 'Sankalp Education Centre, Delhi',
     slug: 'session-at-sankalp-education-centre-delhi-july-2026',
