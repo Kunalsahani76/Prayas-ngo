@@ -12,6 +12,11 @@ type FormData = {
   skills: string;
 };
 
+type ResumeUploadResponse = {
+  secureUrl: string;
+  originalFilename: string;
+};
+
 export default function VolunteerForm() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -34,42 +39,79 @@ export default function VolunteerForm() {
     onDrop: (acceptedFiles) => {
       setFile(acceptedFiles[0]);
     },
+    onDropRejected: () => {
+      alert("Please upload one PDF or DOCX resume no larger than 10MB.");
+    },
   });
 
   const onSubmit = async (data: FormData) => {
     setLoading(true);
 
-    const message = [
-      "Volunteer Application",
-      "",
-      "To: prayasfoundation2025@gmail.com",
-      `Full Name: ${data.fullName}`,
-      `Mobile Number: ${data.mobile}`,
-      `Email ID: ${data.email}`,
-      `Skills: ${data.skills}`,
-      `Resume: ${file?.name ?? "Not uploaded"}`,
-    ].join("\n");
-
-    if (!form.current) {
-      setLoading(false);
-      return;
-    }
-
-    const setEmailField = (name: string, value: string) => {
-      const field = form.current?.elements.namedItem(name);
-      if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) {
-        field.value = value;
-      }
-    };
-
-    setEmailField("first_name", "Volunteer");
-    setEmailField("last_name", data.fullName);
-    setEmailField("subject", `Volunteer Application - ${data.fullName}`);
-    setEmailField("message", message);
-    setEmailField("to_email", "prayasfoundation2025@gmail.com");
-    setEmailField("resume_name", file?.name ?? "Not uploaded");
+    let resumeLink = "Not uploaded";
 
     try {
+      if (file) {
+        const uploadData = new FormData();
+        uploadData.append("resume", file);
+
+        const uploadResponse = await fetch("/api/volunteer-resume", {
+          method: "POST",
+          body: uploadData,
+        });
+        const uploadResult = (await uploadResponse.json()) as
+          | ResumeUploadResponse
+          | { error?: string };
+
+        if (!uploadResponse.ok || !("secureUrl" in uploadResult)) {
+          throw new Error(
+            "error" in uploadResult && uploadResult.error
+              ? uploadResult.error
+              : "Resume upload failed."
+          );
+        }
+
+        resumeLink = uploadResult.secureUrl;
+      }
+
+      const message = [
+        "Volunteer Application",
+        "",
+        "To: prayasfoundation2025@gmail.com",
+        `Full Name: ${data.fullName}`,
+        `Mobile Number: ${data.mobile}`,
+        `Email ID: ${data.email}`,
+        `Skills: ${data.skills}`,
+        `Resume: ${file?.name ?? "Not uploaded"}`,
+        `Resume download link: ${resumeLink}`,
+      ].join("\n");
+      // The current EmailJS template displays {{resume_name}}. Include the
+      // Cloudinary URL in that existing field so no template change is needed.
+      const resumeDetails = file
+        ? `${file.name}\nDownload resume: ${resumeLink}`
+        : "Not uploaded";
+
+      if (!form.current) {
+        setLoading(false);
+        return;
+      }
+
+      const setEmailField = (name: string, value: string) => {
+        const field = form.current?.elements.namedItem(name);
+        if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) {
+          field.value = value;
+        }
+      };
+
+      setEmailField("first_name", "Volunteer");
+      setEmailField("last_name", data.fullName);
+      setEmailField("subject", `Volunteer Application - ${data.fullName}`);
+      setEmailField("message", message);
+      setEmailField("to_email", "prayasfoundation2025@gmail.com");
+      setEmailField("resume_name", resumeDetails);
+      setEmailField("resume_link", resumeLink);
+
+      // The file is already stored in Cloudinary. Send only its URL to EmailJS;
+      // submitting the file input itself exceeds EmailJS's 50KB variables limit.
       await emailjs.send(
         "service_bualwce",
         "template_n5ez9gm",
@@ -81,7 +123,8 @@ export default function VolunteerForm() {
           from_email: data.email,
           mobile: data.mobile,
           skills: data.skills,
-          resume_name: file?.name ?? "Not uploaded",
+          resume_name: resumeDetails,
+          resume_link: resumeLink,
           message,
         },
         "-OBc7GDCXkLBa-Ot9"
@@ -115,6 +158,7 @@ export default function VolunteerForm() {
   <input type="hidden" name="subject" />
   <input type="hidden" name="to_email" />
   <input type="hidden" name="resume_name" />
+  <input type="hidden" name="resume_link" />
   <textarea name="message" className="hidden" readOnly />
   {/* Full Name */}
   <div>
