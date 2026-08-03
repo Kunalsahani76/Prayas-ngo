@@ -58,9 +58,12 @@ export default function VolunteerForm() {
           method: "POST",
           body: uploadData,
         });
-        const uploadResult = (await uploadResponse.json()) as
-          | ResumeUploadResponse
-          | { error?: string };
+        const contentType = uploadResponse.headers.get("content-type") ?? "";
+        const uploadResult = contentType.includes("application/json")
+          ? ((await uploadResponse.json()) as
+              | ResumeUploadResponse
+              | { error?: string })
+          : { error: "Resume upload service returned an invalid response." };
 
         if (!uploadResponse.ok || !("secureUrl" in uploadResult)) {
           throw new Error(
