@@ -76,6 +76,13 @@ import { useEffect, useState } from "react";
     slug: "suruchi-bassi",
     bio:"Suruchi Bassi is a Holistic Wellness Coach, Energy Healer, Grand Reiki Master, and Yoga Practitioner dedicated to empowering individuals on their journey toward health, happiness, and self-growth. Through a blend of yoga, meditation, breathwork, energy healing, and life coaching, she helps people build physical vitality, emotional resilience, and inner balance.\n\nSuruchi creates transformative experiences that inspire positive lifestyle changes, self-awareness, and overall well-being. Her mission is to help people reconnect with their inner strength and live a more conscious, fulfilling life."
   },
+  {
+    name: "Kritika Goel",
+    title: "Program Coordinator",
+    image: "/team/Kritika Goel.jpg",
+    slug: "kritika-goel",
+    bio: "Kritika Goel is a Mechatronics Engineer, Kathak Dancer, and passionate learner who believes in the unique potential of every individual. Rooted in the values of lifelong learning and purposeful action, she has cultivated a deep interest in history, philosophy, governance, and society while actively contributing to youth-led initiatives and community engagement. She has led in organising impactful programs, youth-driven campaigns, and foster meaningful collaboration. She is driven by curiosity, values thoughtful dialogue, and believes that meaningful change begins with individuals who are willing to learn, serve, and grow together."
+  },
 ];
 
 const imagePositionBySlug: Record<string, string> = {

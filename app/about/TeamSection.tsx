@@ -66,7 +66,13 @@ const team: TeamMember[] = [
     title: "Program Coordinator",
     image: "/team/suruchi-bassi.png",
     slug: "suruchi-bassi",
-  }
+  },
+  {
+    name: "Kritika Goel",
+    title: "Program Coordinator",
+    image: "/team/Kritika Goel.jpg",
+    slug: "kritika-goel",
+  },
 ];
 
 const imagePositionBySlug: Record<string, string> = {
