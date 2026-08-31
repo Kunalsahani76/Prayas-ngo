@@ -13,6 +13,24 @@ import { title } from "node:process";
 
 const events = [
   {
+    image: '/event/Sessions%20at%20schools%2C%20Rairangpur%2C%20Odisha/1.jpeg',
+    imagePosition: 'center',
+    title: 'Sessions at schools, Rairangpur, Odisha',
+    date: '10th Aug 2026',
+    location: 'Chandra Sekhar Academy, Puri',
+    slug: 'sessions-at-schools-rairangpur-odisha',
+    hasDetails: true,
+  },
+  {
+    image: '/event/Session%20at%20AID%20Noida%20-%2027th%20Aug%202026/aid%201.jpg',
+    imagePosition: 'center',
+    title: 'Session at AID Noida - 27th Aug 2026',
+    date: '27th Aug 2026',
+    location: 'AID Noida, Noida',
+    slug: 'session-at-aid-noida-27th-aug-2026',
+    hasDetails: true,
+  },
+  {
     image: '/event/Session%20at%20AID%20Noida%20Centre%20July%202026/WhatsApp%20Image%202026-07-18%20at%2011.22.13%20%20%20AM.jpeg',
     imagePosition: 'center 30%',
     title: 'Session at AID Noida Centre July 2026',
