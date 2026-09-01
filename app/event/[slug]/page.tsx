@@ -58,6 +58,23 @@ const eventDetails: Record<string, {
       { src: "/event/Sessions%20at%20schools%2C%20Rairangpur%2C%20Odisha/27.jpeg", title: "Sessions at schools, Rairangpur, Odisha" },
     ],
   },
+  "session-at-chandra-sekhar-academy-puri-aug-2026": {
+    title: "Session at Chandra Sekhar Academy, Puri Aug 2026",
+    date: "Aug 2026",
+    location: "Chandra Sekhar Academy, Puri",
+    description: "A session at Chandra Sekhar Academy, Puri, with students and teachers participating in meaningful learning and interaction.",
+    images: [
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.25%20PM%20%281%29.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.25%20PM.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.26%20PM%20%281%29.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.26%20PM%20%282%29.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.26%20PM.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.27%20PM%20%281%29.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.27%20PM.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.28%20PM.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+      { src: "/event/Updated%20Sep/Session%20at%20Chandra%20Sekhar%20Academy%2C%20Puri%20Aug%202026/WhatsApp%20Image%202026-08-05%20at%202.58.29%20PM.jpeg", title: "Session at Chandra Sekhar Academy, Puri Aug 2026" },
+    ],
+  },
   "session-at-aid-noida-centre-july-2026": {
     title: "Session at AID Noida Centre July 2026",
     date: "July 2026",
