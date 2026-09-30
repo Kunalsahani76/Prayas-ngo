@@ -10,6 +10,21 @@ const eventDetails: Record<string, {
   description: string;
   images: { src: string; title: string }[];
 }> = {
+  "govt-coed-school-chandni-chowk-delhi-creative-writing": {
+    title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing",
+    date: "10/09/2026",
+    location: "Govt CoEd School, Chandni chowk, Delhi",
+    description: "A creative writing session at Govt CoEd School, Chandni chowk, Delhi.",
+    images: [
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.28%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.30%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.31%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.34%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.36%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.38%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.40%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
+    ],
+  },
   "session-at-aid-noida-27th-aug-2026": {
     title: "Session at AID Noida - 27th Aug 2026",
     date: "27th Aug 2026",

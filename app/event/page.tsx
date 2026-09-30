@@ -13,6 +13,15 @@ import { title } from "node:process";
 
 const events = [
   {
+    image: '/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.28%20PM.jpeg',
+    imagePosition: 'center',
+    title: 'Govt CoEd School, Chandni chowk, Delhi. Session on creative writing',
+    date: '10/09/2026',
+    location: 'Govt CoEd School, Chandni chowk, Delhi',
+    slug: 'govt-coed-school-chandni-chowk-delhi-creative-writing',
+    hasDetails: true,
+  },
+  {
     image: '/event/Session%20at%20AID%20Noida%20-%2027th%20Aug%202026/aid%201.jpg',
     imagePosition: 'center',
     title: 'Session at AID Noida - 27th Aug 2026',
