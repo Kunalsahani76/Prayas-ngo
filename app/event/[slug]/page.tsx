@@ -10,12 +10,29 @@ const eventDetails: Record<string, {
   description: string;
   images: { src: string; title: string }[];
 }> = {
+  "career-counseling-govt-girls-school-shakurpur-delhi": {
+    title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi",
+    date: "October 2026",
+    location: "Govt Girls School, Shakurpur, Delhi",
+    description: "A career counseling session at Govt Girls School, Shakurpur, Delhi.",
+    images: [
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/1.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/2.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/3.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/4.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/5.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/6.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/7.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/8.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+    ],
+  },
   "govt-coed-school-chandni-chowk-delhi-creative-writing": {
     title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing",
     date: "10/09/2026",
     location: "Govt CoEd School, Chandni chowk, Delhi",
     description: "A creative writing session at Govt CoEd School, Chandni chowk, Delhi.",
     images: [
+      { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/certificate.jpg", title: "Certificate of participation for the creative writing session" },
       { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.28%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
       { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.30%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },
       { src: "/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.31%20PM.jpeg", title: "Govt CoEd School, Chandni chowk, Delhi. Session on creative writing" },

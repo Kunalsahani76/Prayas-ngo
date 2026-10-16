@@ -13,6 +13,15 @@ import { title } from "node:process";
 
 const events = [
   {
+    image: '/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/1.jpeg',
+    imagePosition: 'center',
+    title: 'Career Counseling session at Govt Girls School, Shakurpur, Delhi',
+    date: 'October 2026',
+    location: 'Govt Girls School, Shakurpur, Delhi',
+    slug: 'career-counseling-govt-girls-school-shakurpur-delhi',
+    hasDetails: true,
+  },
+  {
     image: '/event/Updated%20Sep/Govt%20CoEd%20School%2C%20Chandni%20chowk%2C%20Delhi.%20Session%20on%20creative%20writing/WhatsApp%20Image%202026-09-29%20at%2012.45.28%20PM.jpeg',
     imagePosition: 'center',
     title: 'Govt CoEd School, Chandni chowk, Delhi. Session on creative writing',
