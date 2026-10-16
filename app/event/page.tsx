@@ -13,6 +13,15 @@ import { title } from "node:process";
 
 const events = [
   {
+    image: '/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/1.jpeg',
+    imagePosition: 'center',
+    title: 'Session on holistic development at Govt Girls School, Chandni Chowk, Delhi',
+    date: 'October 2026',
+    location: 'Govt Girls School, Chandni Chowk, Delhi',
+    slug: 'session-on-holistic-development-govt-girls-school-chandni-chowk-delhi',
+    hasDetails: true,
+  },
+  {
     image: '/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/1.jpeg',
     imagePosition: 'center',
     title: 'Career Counseling session at Govt Girls School, Shakurpur, Delhi',

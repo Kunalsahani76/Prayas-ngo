@@ -10,12 +10,29 @@ const eventDetails: Record<string, {
   description: string;
   images: { src: string; title: string }[];
 }> = {
+  "session-on-holistic-development-govt-girls-school-chandni-chowk-delhi": {
+    title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi",
+    date: "October 2026",
+    location: "Govt Girls School, Chandni Chowk, Delhi",
+    description: "A session on holistic development at Govt Girls School, Chandni Chowk, Delhi.",
+    images: [
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/1.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/2.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/3.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/4.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/5.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/6.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+      { src: "/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/7.jpeg", title: "Session on holistic development at Govt Girls School, Chandni Chowk, Delhi" },
+    ],
+  },
   "career-counseling-govt-girls-school-shakurpur-delhi": {
     title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi",
     date: "October 2026",
     location: "Govt Girls School, Shakurpur, Delhi",
     description: "A career counseling session at Govt Girls School, Shakurpur, Delhi.",
     images: [
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/9.jpg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
+      { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/10.jpg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
       { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/1.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
       { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/2.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
       { src: "/event/Updated%20Oct/Career%20Counseling%20session%20at%20Govt%20Girls%20School%2C%20Shakurpur%2C%20Delhi/3.jpeg", title: "Career Counseling session at Govt Girls School, Shakurpur, Delhi" },
