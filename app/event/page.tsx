@@ -13,24 +13,6 @@ import { title } from "node:process";
 
 const events = [
   {
-    image: '/event/Updated%20Oct/Interactive%20session%20with%20students%20%40%20Chhaya%20Public%20School%2C%20Ghaziabad/1.jpeg',
-    imagePosition: 'center',
-    title: 'Interactive session with students @ Chhaya Public School, Ghaziabad',
-    date: 'October 2026',
-    location: 'Chhaya Public School, Ghaziabad',
-    slug: 'interactive-session-chhaya-public-school-ghaziabad',
-    hasDetails: true,
-  },
-  {
-    image: '/event/Updated%20Oct/Interaction%20with%20students%20at%20Lotus%20Krishna%20Vidya%20Bhawan%20-%2016th%20Sep%202026/1.jpeg',
-    imagePosition: 'center',
-    title: 'Interaction with students at Lotus Krishna Vidya Bhawan',
-    date: '16th Sep 2026',
-    location: 'Lotus Krishna Vidya Bhawan',
-    slug: 'interaction-with-students-lotus-krishna-vidya-bhawan-sep-2026',
-    hasDetails: true,
-  },
-  {
     image: '/event/Updated%20Oct/Session%20on%20holistic%20development%20at%20Govt%20Girls%20School%2C%20Chandni%20Chowk%2C%20Delhi/1.jpeg',
     imagePosition: 'center',
     title: 'Session on holistic development at Govt Girls School, Chandni Chowk, Delhi',
@@ -46,6 +28,24 @@ const events = [
     date: 'October 2026',
     location: 'Govt Girls School, Shakurpur, Delhi',
     slug: 'career-counseling-govt-girls-school-shakurpur-delhi',
+    hasDetails: true,
+  },
+  {
+    image: '/event/Updated%20Oct/Interactive%20session%20with%20students%20%40%20Chhaya%20Public%20School%2C%20Ghaziabad/1.jpeg',
+    imagePosition: 'center',
+    title: 'Interactive session with students @ Chhaya Public School, Ghaziabad',
+    date: 'October 2026',
+    location: 'Chhaya Public School, Ghaziabad',
+    slug: 'interactive-session-chhaya-public-school-ghaziabad',
+    hasDetails: true,
+  },
+  {
+    image: '/event/Updated%20Oct/Interaction%20with%20students%20at%20Lotus%20Krishna%20Vidya%20Bhawan%20-%2016th%20Sep%202026/1.jpeg',
+    imagePosition: 'center',
+    title: 'Interaction with students at Lotus Krishna Vidya Bhawan',
+    date: '16th Sep 2026',
+    location: 'Lotus Krishna Vidya Bhawan',
+    slug: 'interaction-with-students-lotus-krishna-vidya-bhawan-sep-2026',
     hasDetails: true,
   },
   {
